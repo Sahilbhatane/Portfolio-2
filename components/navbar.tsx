@@ -116,12 +116,12 @@ export default function Navbar() {
             ? "px-3 py-2 sm:px-4 md:px-4 max-w-full" 
             : "px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 max-w-full",
           isHovered 
-            ? "border-violet-400/80 shadow-[0_0_40px_rgba(139,69,219,0.6),0_0_20px_rgba(139,69,219,0.4)_inset] bg-white/80 dark:bg-neutral-900/80" 
+            ? "border-green-400/80 shadow-[0_0_40px_rgba(57,255,20,0.6),0_0_20px_rgba(57,255,20,0.4)_inset] bg-white/80 dark:bg-neutral-900/80" 
             : "border-white/40 dark:border-neutral-800/70 shadow-[0_8px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.3)] bg-white/70 dark:bg-neutral-900/70"
         )}
         style={{
           background: isHovered 
-            ? `radial-gradient(circle at ${mousePos.x}% ${mousePos.y}%, rgba(139,69,219,0.3) 0%, rgba(139,69,219,0.2) 30%, rgba(139,69,219,0.1) 60%, transparent 80%), ${
+            ? `radial-gradient(circle at ${mousePos.x}% ${mousePos.y}%, rgba(57,255,20,0.3) 0%, rgba(57,255,20,0.2) 30%, rgba(57,255,20,0.1) 60%, transparent 80%), ${
                 compact ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.8)'
               } dark:rgba(23,23,23,0.8)`
             : undefined
@@ -131,15 +131,15 @@ export default function Navbar() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {/* Purple glow overlay on hover */}
+        {/* Neon glow overlay on hover */}
         <span
           className={cn(
             "pointer-events-none absolute inset-0 rounded-full transition-all duration-1200 ease-[cubic-bezier(0.4,0,0.2,1)]",
             isHovered ? "opacity-100 scale-100" : "opacity-0 scale-95"
           )}
           style={{
-            background: `radial-gradient(80px 80px at ${mousePos.x}% ${mousePos.y}%, rgba(139,69,219,0.6) 0%, rgba(139,69,219,0.3) 40%, transparent 70%)`,
-            boxShadow: isHovered ? `0 0 50px rgba(139,69,219,0.4), 0 0 25px rgba(139,69,219,0.3) inset` : "none",
+            background: `radial-gradient(80px 80px at ${mousePos.x}% ${mousePos.y}%, rgba(57,255,20,0.6) 0%, rgba(57,255,20,0.3) 40%, transparent 70%)`,
+            boxShadow: isHovered ? `0 0 50px rgba(57,255,20,0.4), 0 0 25px rgba(57,255,20,0.3) inset` : "none",
             transitionDelay: isHovered ? "0ms" : "100ms"
           }}
         />
@@ -152,8 +152,8 @@ export default function Navbar() {
           )}
           style={{
             background: "transparent",
-            border: "1px solid rgba(139,69,219,0.7)",
-            boxShadow: isHovered ? `0 0 30px rgba(139,69,219,0.5), 0 0 15px rgba(139,69,219,0.4) inset` : "none",
+            border: "1px solid rgba(57,255,20,0.7)",
+            boxShadow: isHovered ? `0 0 30px rgba(57,255,20,0.5), 0 0 15px rgba(57,255,20,0.4) inset` : "none",
             transitionDelay: isHovered ? "50ms" : "200ms"
           }}
         />
@@ -166,8 +166,8 @@ export default function Navbar() {
               "font-semibold tracking-tight transition-all duration-500 flex-shrink-0",
               compact ? "text-sm sm:text-base" : "text-base sm:text-lg",
               isHovered 
-                ? "text-violet-600 dark:text-violet-400 drop-shadow-[0_0_12px_rgba(139,69,219,0.8)] [text-shadow:0_0_16px_rgba(139,69,219,0.6)]"
-                : "hover:text-violet-500 hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.6)]"
+                ? "text-green-600 dark:text-green-400 drop-shadow-[0_0_12px_rgba(57,255,20,0.8)] [text-shadow:0_0_16px_rgba(57,255,20,0.6)]"
+                : "hover:text-green-500 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
             )}
             aria-label="Sahil Bhatane Home"
           >
@@ -191,15 +191,15 @@ export default function Navbar() {
                   "text-sm xl:text-[15px] transition-all duration-500 relative group px-2 py-1",
                   "text-foreground", // Ensure text is always visible
                   activeSection === item.href.slice(1)
-                    ? "text-violet-500 drop-shadow-[0_0_8px_rgba(139,69,219,0.6)]"
+                    ? "text-green-500 drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
                     : isHovered
-                    ? "text-violet-600 dark:text-violet-400 drop-shadow-[0_0_8px_rgba(139,69,219,0.6)]"
-                    : "hover:text-violet-500 hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.6)]"
+                    ? "text-green-600 dark:text-green-400 drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
+                    : "hover:text-green-500 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
                 )}
               >
                 {item.label}
                 <span className={cn(
-                  "absolute -bottom-1 left-2 right-2 h-0.5 bg-gradient-to-r from-violet-400 to-violet-600 transition-all duration-500",
+                  "absolute -bottom-1 left-2 right-2 h-0.5 bg-gradient-to-r from-green-400 to-green-600 transition-all duration-500",
                   activeSection === item.href.slice(1) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                 )} />
               </a>
@@ -220,8 +220,8 @@ export default function Navbar() {
                     "rounded-full transition-all duration-500 hover:scale-110",
                     "h-8 w-8 sm:h-9 sm:w-9",
                     isHovered
-                      ? "bg-violet-400/20 text-violet-600 dark:text-violet-400 hover:bg-violet-400/30"
-                      : "hover:bg-violet-400/10 hover:text-violet-500"
+                      ? "bg-green-400/20 text-green-600 dark:text-green-400 hover:bg-green-400/30"
+                      : "hover:bg-green-400/10 hover:text-green-500"
                   )}
                 >
                   {mode === "dark" ? 
@@ -237,8 +237,8 @@ export default function Navbar() {
               <Button className={cn(
                 "rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm transition-all duration-500 border",
                 isHovered
-                  ? "bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 border-violet-400/40 text-white shadow-[0_0_25px_rgba(139,69,219,0.5)]"
-                  : "bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 border-violet-400/20 hover:shadow-[0_0_20px_rgba(139,69,219,0.4)] hover:scale-105"
+                  ? "bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 border-green-400/40 text-white shadow-[0_0_25px_rgba(57,255,20,0.5)]"
+                  : "bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 border-green-400/20 hover:shadow-[0_0_20px_rgba(57,255,20,0.4)] hover:scale-105"
               )}>
                 <span className="hidden md:inline">See Work</span>
                 <span className="md:hidden">Work</span>
@@ -253,8 +253,8 @@ export default function Navbar() {
                 "md:hidden rounded-full transition-all duration-500",
                 "h-8 w-8 sm:h-9 sm:w-9",
                 isHovered
-                  ? "bg-violet-400/20 text-violet-600 dark:text-violet-400 hover:bg-violet-400/30"
-                  : "hover:bg-violet-400/10 hover:text-violet-500"
+                  ? "bg-green-400/20 text-green-600 dark:text-green-400 hover:bg-green-400/30"
+                  : "hover:bg-green-400/10 hover:text-green-500"
               )}
               onClick={() => {
                 console.log('Mobile menu clicked, current state:', mobileMenuOpen)
@@ -294,13 +294,13 @@ export default function Navbar() {
                   "block px-4 py-3 rounded-xl transition-all duration-300 relative group",
                   "text-sm font-medium border border-transparent",
                   activeSection === item.href.slice(1)
-                    ? "text-violet-500 bg-violet-50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-800/30 drop-shadow-[0_0_8px_rgba(139,69,219,0.3)]"
-                    : "hover:text-violet-500 hover:bg-violet-50/50 dark:hover:bg-violet-950/10 hover:border-violet-200/50 dark:hover:border-violet-800/20 hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.2)]"
+                    ? "text-green-500 bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800/30 drop-shadow-[0_0_8px_rgba(57,255,20,0.3)]"
+                    : "hover:text-green-500 hover:bg-green-50/50 dark:hover:bg-green-950/10 hover:border-green-200/50 dark:hover:border-green-800/20 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.2)]"
                 )}
               >
                 <span className="relative z-10">{item.label}</span>
                 <span className={cn(
-                  "absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-violet-400 to-violet-600 transition-all duration-300",
+                  "absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-green-400 to-green-600 transition-all duration-300",
                   activeSection === item.href.slice(1) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                 )} />
               </a>
@@ -311,8 +311,8 @@ export default function Navbar() {
               <a href="#projects" onClick={() => setMobileMenuOpen(false)}>
                 <Button className={cn(
                   "w-full rounded-xl py-3 text-sm transition-all duration-500 border",
-                  "bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600",
-                  "border-violet-400/20 text-white hover:shadow-[0_0_20px_rgba(139,69,219,0.4)] hover:scale-105"
+                  "bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600",
+                  "border-green-400/20 text-white hover:shadow-[0_0_20px_rgba(57,255,20,0.4)] hover:scale-105"
                 )}>
                   See My Work
                 </Button>

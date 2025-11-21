@@ -176,20 +176,20 @@ export default function ContactFooter() {
             className="group relative overflow-hidden rounded-full px-6 py-3 text-sm backdrop-blur-md
               bg-white/80 dark:bg-neutral-900/80 border border-neutral-200/60 dark:border-neutral-800/60
               shadow-[0_8px_30px_rgba(0,0,0,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-              hover:shadow-[0_12px_40px_rgba(139,69,219,0.3)] hover:border-violet-400/50 hover:scale-105
-              hover:text-violet-400 hover:drop-shadow-[0_0_12px_rgba(139,69,219,0.7)]
+              hover:shadow-[0_12px_40px_rgba(57,255,20,0.3)] hover:border-green-400/50 hover:scale-105
+              hover:text-green-400 hover:drop-shadow-[0_0_12px_rgba(57,255,20,0.7)]
               transform hover:-translate-y-1"
           >
             {/* Animated background gradient */}
-            <span className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-purple-500/20 
+            <span className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 
               opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             {/* Ripple effect on hover */}
-            <span className="absolute inset-0 rounded-full bg-violet-400/10 scale-0 
+            <span className="absolute inset-0 rounded-full bg-green-400/10 scale-0 
               group-hover:scale-100 transition-transform duration-700 ease-out" />
             
             <span className="relative flex items-center gap-2">
-              <span className="w-2 h-2 bg-violet-400 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               Let's Connect
               <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
             </span>
@@ -214,8 +214,8 @@ export default function ContactFooter() {
         className="mx-auto mb-3 block rounded-full px-5 py-2 text-sm backdrop-blur-md
           bg-white/70 dark:bg-neutral-900/70 border border-neutral-200/60 dark:border-neutral-800/60
           shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-          hover:shadow-[0_8px_30px_rgba(139,69,219,0.25)] hover:border-violet-400/40 hover:scale-105
-          hover:text-violet-400 hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.6)]"
+          hover:shadow-[0_8px_30px_rgba(57,255,20,0.25)] hover:border-green-400/40 hover:scale-105
+          hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
       >
         {open ? "Close" : "Contact Me"}
       </button>

@@ -27,6 +27,42 @@ export const resume = {
   ],
   projects: [
     {
+      title: "Federated Meta Learning",
+      description:
+        "Federated Meta Learning using MAML and Pytorch. (In Progress)",
+      tags: ["Python", "PyTorch", "Federated Learning", "MAML", "Jupyter Notebook"],
+      imageAlt: "Federated Learning Concept",
+      image: "/images/machine learning.png",
+      link: "https://github.com/Sahilbhatane/Federated-Meta-learning-using-MAML-and-Pytorch",
+    },
+    {
+      title: "Realtime WebRTC VLM Object Detection",
+      description:
+        "Real-time multi-object detection using WebRTC and Vision Language Models.",
+      tags: ["TypeScript", "WebRTC", "VLM", "Object Detection"],
+      imageAlt: "Object Detection Demo",
+      image: "/placeholder.svg",
+      link: "https://github.com/Sahilbhatane/Real-time-WebRTC-VLM-Multi-Object-Detection",
+    },
+    {
+      title: "Sign Language Detection",
+      description:
+        "Sign language detection using MobileNetV3 and React.js.",
+      tags: ["Python", "React.js", "MobileNetV3", "Computer Vision"],
+      imageAlt: "Sign Language Detection Demo",
+      image: "/placeholder.svg",
+      link: "https://github.com/Sahilbhatane/SLI-Sign_language_detection-using-MobilenetV3-and-Reactjs",
+    },
+    {
+      title: "Task Project (Admybrand)",
+      description:
+        "Frontend project with Next.js.",
+      tags: ["TypeScript", "Next.js", "Frontend"],
+      imageAlt: "Task Project Interface",
+      image: "/placeholder.svg",
+      link: "https://github.com/Sahilbhatane/Task-project",
+    },
+    {
       title: "Health Predictor",
       description:
         "End-to-end disease prediction web app using multiple ML algorithms (LR, SVM, DT). Built the UI with Streamlit for rapid prototyping and results visualization.",

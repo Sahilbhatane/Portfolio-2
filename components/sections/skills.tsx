@@ -35,7 +35,7 @@ export default function Skills() {
                 group relative rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 p-4 text-center 
                 bg-white/50 dark:bg-neutral-900/40 backdrop-blur-md 
                 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-                hover:scale-[1.08] hover:shadow-[0_0_25px_rgba(139,69,219,0.25)] hover:border-violet-400/60
+                hover:scale-[1.08] hover:shadow-[0_0_25px_rgba(57,255,20,0.25)] hover:border-green-400/60
                 ${visibleItems.has(index) 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : 'opacity-0 translate-y-12 scale-90'
@@ -51,18 +51,18 @@ export default function Skills() {
                     src={skill.image}
                     alt={`${skill.name} icon`}
                     fill
-                    className="object-contain filter transition-all duration-500 group-hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.4)]"
+                    className="object-contain filter transition-all duration-500 group-hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.4)]"
                   />
                 </div>
                 <span className="font-medium text-neutral-800 dark:text-neutral-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-sm
-                group-hover:text-violet-400 group-hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.8)] group-hover:[text-shadow:0_0_12px_rgba(139,69,219,0.6)]">
+                group-hover:text-green-400 group-hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.8)] group-hover:[text-shadow:0_0_12px_rgba(57,255,20,0.6)]">
                   {skill.name}
                 </span>
               </div>
               
               {/* Hover glow effect */}
               <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none
-              bg-gradient-to-br from-violet-400/10 via-transparent to-violet-600/10"></div>
+              bg-gradient-to-br from-green-400/10 via-transparent to-green-600/10"></div>
             </div>
           ))}
         </div>

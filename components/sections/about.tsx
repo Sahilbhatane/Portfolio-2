@@ -45,15 +45,15 @@ export default function About() {
             >
               <div className="group rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 p-4 
               bg-white/50 dark:bg-neutral-900/40 backdrop-blur-md
-              transition-all duration-500 hover:shadow-[0_0_20px_rgba(139,69,219,0.15)] hover:border-violet-400/40 hover:scale-[1.02]">
-                <div className="text-xs text-neutral-500 group-hover:text-violet-400 transition-colors duration-300">Location</div>
-                <div className="font-medium group-hover:text-violet-300 transition-colors duration-300">Pune, India</div>
+              transition-all duration-500 hover:shadow-[0_0_20px_rgba(57,255,20,0.15)] hover:border-green-400/40 hover:scale-[1.02]">
+                <div className="text-xs text-neutral-500 group-hover:text-green-400 transition-colors duration-300">Location</div>
+                <div className="font-medium group-hover:text-green-300 transition-colors duration-300">Pune, India</div>
               </div>
               <div className="group rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 p-4 
               bg-white/50 dark:bg-neutral-900/40 backdrop-blur-md
-              transition-all duration-500 hover:shadow-[0_0_20px_rgba(139,69,219,0.15)] hover:border-violet-400/40 hover:scale-[1.02]">
-                <div className="text-xs text-neutral-500 group-hover:text-violet-400 transition-colors duration-300">Email</div>
-                <a className="font-medium hover:underline group-hover:text-violet-300 transition-colors duration-300" href={`mailto:${resume.contact.email}`}>
+              transition-all duration-500 hover:shadow-[0_0_20px_rgba(57,255,20,0.15)] hover:border-green-400/40 hover:scale-[1.02]">
+                <div className="text-xs text-neutral-500 group-hover:text-green-400 transition-colors duration-300">Email</div>
+                <a className="font-medium hover:underline group-hover:text-green-300 transition-colors duration-300" href={`mailto:${resume.contact.email}`}>
                   {resume.contact.email}
                 </a>
               </div>

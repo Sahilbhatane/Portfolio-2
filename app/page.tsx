@@ -8,6 +8,8 @@ import Skills from "@/components/sections/skills"
 import Projects from "@/components/sections/projects"
 import Experience from "@/components/sections/experience"
 import ContactFooter from "@/components/sections/contact-footer"
+import Certifications from "@/components/sections/certifications"
+import Contributions from "@/components/sections/contributions"
 
 export default function Page() {
   return (
@@ -28,7 +30,9 @@ export default function Page() {
         <About />
         <Skills />
         <Projects />
+        <Contributions />
         <Experience />
+        <Certifications />
       </div>
 
       {/* Collapsible Contact Footer */}

@@ -170,7 +170,7 @@ export default function InteractiveBackground({
         const ripple = document.createElement("div")
         ripple.style.position = "absolute"
         ripple.style.borderRadius = "50%"
-        ripple.style.background = "rgba(100, 150, 255, 0.3)"
+        ripple.style.background = "rgba(57, 255, 20, 0.3)"
         ripple.style.transform = "scale(0)"
         ripple.style.animation = "ripple 0.6s linear"
         ripple.style.left = "50%"

@@ -81,17 +81,35 @@ export default function Hero() {
             <a
               href="#experience"
               className="text-sm text-neutral-600 dark:text-neutral-300 underline underline-offset-4 hover:no-underline 
-              transition-all duration-300 hover:text-violet-500 hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.6)]"
+              transition-all duration-300 hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
             >
               Work Experience
             </a>
             <a
               href="#skills"
               className="text-sm text-neutral-600 dark:text-neutral-300 underline underline-offset-4 hover:no-underline
-              transition-all duration-300 hover:text-violet-500 hover:drop-shadow-[0_0_8px_rgba(139,69,219,0.6)]"
+              transition-all duration-300 hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
             >
               Skills
             </a>
+          </div>
+
+          <div 
+            className={`
+              mt-12 w-full overflow-hidden rounded-lg border border-neutral-200/60 dark:border-neutral-800/60 bg-white/30 dark:bg-neutral-900/30 backdrop-blur-sm p-4
+              transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
+              ${linksVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+            `}
+            style={{ transitionDelay: '1200ms' }}
+          >
+            <p className="text-xs text-neutral-500 mb-2">GitHub Activity</p>
+            <div className="overflow-x-auto">
+               <img 
+                  src="https://ghchart.rshah.org/39FF14/Sahilbhatane" 
+                  alt="Sahilbhatane's Github Chart" 
+                  className="min-w-[600px] w-full opacity-80 hover:opacity-100 transition-opacity"
+                />
+            </div>
           </div>
         </div>
       </div>

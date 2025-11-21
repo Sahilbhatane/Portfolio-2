@@ -42,22 +42,22 @@ export default function Experience() {
                 transitionDelay: visibleItems.has(idx) ? `${idx * 200}ms` : '0ms'
               }}
             >
-              <div className="absolute w-3 h-3 rounded-full bg-gradient-to-r from-violet-500 to-violet-600 
+              <div className="absolute w-3 h-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 
               ring-2 ring-white dark:ring-neutral-900 -left-[7px] mt-2.5
-              transition-all duration-500 group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(139,69,219,0.6)]" />
+              transition-all duration-500 group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(57,255,20,0.6)]" />
               
               <div className="p-4 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 
               bg-white/50 dark:bg-neutral-900/40 backdrop-blur-md
-              transition-all duration-500 group-hover:border-violet-400/40 group-hover:shadow-[0_0_20px_rgba(139,69,219,0.15)]
+              transition-all duration-500 group-hover:border-green-400/40 group-hover:shadow-[0_0_20px_rgba(57,255,20,0.15)]
               group-hover:translate-x-2">
-                <time className="mb-1 text-xs font-medium text-violet-500 dark:text-violet-400 
-                transition-all duration-300 group-hover:text-violet-400 group-hover:drop-shadow-[0_0_4px_rgba(139,69,219,0.6)]">
+                <time className="mb-1 text-xs font-medium text-green-500 dark:text-green-400 
+                transition-all duration-300 group-hover:text-green-400 group-hover:drop-shadow-[0_0_4px_rgba(57,255,20,0.6)]">
                   {exp.period}
                 </time>
-                <h3 className="text-lg font-semibold group-hover:text-violet-300 transition-colors duration-300">
+                <h3 className="text-lg font-semibold group-hover:text-green-300 transition-colors duration-300">
                   {exp.role} • {exp.company}
                 </h3>
-                <div className="text-xs text-neutral-500 mb-2 group-hover:text-violet-400 transition-colors duration-300">
+                <div className="text-xs text-neutral-500 mb-2 group-hover:text-green-400 transition-colors duration-300">
                   {exp.location}
                 </div>
                 <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 space-y-1">
