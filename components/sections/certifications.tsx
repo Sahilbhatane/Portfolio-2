@@ -30,7 +30,7 @@ export default function Certifications() {
         <div 
           ref={elementRef as any}
           className={`
-            max-w-3xl mx-auto
+            max-w-4xl
             transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
             ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
           `}

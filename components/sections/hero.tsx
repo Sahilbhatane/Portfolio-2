@@ -1,7 +1,7 @@
 "use client"
 
 import MagneticButton from "@/components/magnetic-button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ExternalLink } from "lucide-react"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 export default function Hero() {
@@ -102,12 +102,24 @@ export default function Hero() {
             `}
             style={{ transitionDelay: '1200ms' }}
           >
-            <p className="text-xs text-neutral-500 mb-2">GitHub Activity</p>
-            <div className="overflow-x-auto">
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-xs text-neutral-500">GitHub Activity</p>
+              <a 
+                href="https://github.com/Sahilbhatane" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900/50 border border-neutral-800 text-xs text-neutral-300 hover:text-green-400 hover:border-green-400/50 transition-all"
+              >
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                @Sahilbhatane
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+            <div className="overflow-x-auto bg-[#0d1117] rounded-md p-3 border border-neutral-800">
                <img 
                   src="https://ghchart.rshah.org/39FF14/Sahilbhatane" 
                   alt="Sahilbhatane's Github Chart" 
-                  className="min-w-[600px] w-full opacity-80 hover:opacity-100 transition-opacity"
+                  className="min-w-[600px] w-full opacity-90 hover:opacity-100 transition-opacity"
                 />
             </div>
           </div>

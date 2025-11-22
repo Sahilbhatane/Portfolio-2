@@ -210,7 +210,10 @@ export default function ContactFooter() {
       <button
         aria-expanded={open}
         aria-controls="contact-panel"
-        onClick={() => open ? handleClose() : setOpen(true)}
+        onClick={(e) => {
+          e.stopPropagation()
+          open ? handleClose() : setOpen(true)
+        }}
         className="mx-auto mb-3 block rounded-full px-5 py-2 text-sm backdrop-blur-md
           bg-white/70 dark:bg-neutral-900/70 border border-neutral-200/60 dark:border-neutral-800/60
           shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
