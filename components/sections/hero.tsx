@@ -45,8 +45,8 @@ export default function Hero() {
               ${descVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
             `}
           >
-            Hands-on developer with capstone and professional projects, hackathon leadership, and internship experience
-            across analytics, full‑stack, and research.
+            Hands-on developer with capstone and professional projects, hackathon leadership, internship and Real world experience
+            across AI/ML, LLMops, Research and other domains.
           </p>
           <div 
             ref={buttonsRef as any}

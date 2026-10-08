@@ -158,5 +158,28 @@ export const resume = {
       period: "Jun 2022 – Sep 2022",
       highlights: ["Studied AWS/Azure cloud; conducted Azure-700 experiments and contributed to research."],
     },
+    {
+      role: "Senior Package Developer",
+      company: "CX (Cortex)",
+      location: "New york, USA (remote)",
+      period: "Aug 2025 – Feb 2026",
+      salary: "$1000/month, Total + Bounty",
+      highlights: ["Developed and maintained software packages for the CX (Cortex) platform."],
+    },
+    {
+      role: "Senior AI/ML",
+      company: "CX (Cortex)",
+      location: "New york, USA (remote)",
+      period: "Aug 2025 – Feb 2026",
+      salary: "$1000/month, Total + Bounty",
+      highlights: ["Developed TUI dashboard for Users with VLMs, LLMs and AI support, helping in Debugging and better installation of pacakges and manintaning them."],
+    },{
+      role: "AI model developer",
+      company: "CX (Cortex)",
+      location: "New york, USA (remote)",
+      period: "Aug 2025 – Feb 2026",
+      salary: "$1000/month, Total + Bounty",
+      highlights: ["Developed and maintained AI, fine-tunned LLM, and VLM models for the TUI dashboard."],
+    },
   ],
 }

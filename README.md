@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing professional work and skills with beautiful animations and interactive elements.
 
-## 🌟 Features
+## Features
 
 - **Responsive Design**: Seamless experience across all devices
 - **Interactive Animations**: Magnetic buttons, scroll animations, and hover effects
@@ -12,7 +12,7 @@ A modern, responsive portfolio website showcasing professional work and skills w
 - **Contact Integration**: Functional contact form
 - **Performance Optimized**: Fast loading and smooth interactions
 
-## 🛠️ Built With
+## Built With
 
 - **Next.js 15** - React framework for production
 - **React 19** - Latest React with modern features
@@ -22,7 +22,7 @@ A modern, responsive portfolio website showcasing professional work and skills w
 - **Lenis** - Smooth scrolling library
 - **Lucide Icons** - Beautiful icon set
 
-## 🎨 Design Features
+## Design Features
 
 - **Glass Morphism**: Backdrop blur effects and translucent elements
 - **Purple Theme**: Consistent violet/purple color scheme with glowing effects
@@ -31,7 +31,7 @@ A modern, responsive portfolio website showcasing professional work and skills w
 - **Responsive Navigation**: Desktop horizontal menu, mobile hamburger menu
 - **Contact Footer**: Smart visibility based on user interaction
 
-## 📱 Responsive Experience
+## Responsive Experience
 
 - **Mobile First**: Optimized for touch devices
 - **Tablet Friendly**: Adaptive layout for medium screens

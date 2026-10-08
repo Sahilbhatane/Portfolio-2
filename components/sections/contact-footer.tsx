@@ -16,21 +16,12 @@ export default function ContactFooter() {
   const [isHovered, setIsHovered] = useState(false)
   const [isAtPageEnd, setIsAtPageEnd] = useState(false)
   const [showPreview, setShowPreview] = useState(false)
+  const [isDismissed, setIsDismissed] = useState(false)
   const { toast } = useToast()
 
-  // Close handler that also manages visibility
   const handleClose = () => {
     setOpen(false)
-    // Force close - temporarily ignore hover state for closing
-    setTimeout(() => {
-      // Double-check if form is still supposed to be closed
-      if (!open) {
-        if (!isAtPageEnd) {
-          setIsVisible(false)
-          setShowPreview(false)
-        }
-      }
-    }, 150)
+    setIsDismissed(true)
   }
 
   useEffect(() => {
@@ -58,6 +49,7 @@ export default function ContactFooter() {
       if (contactLink || target.textContent?.includes('Contact')) {
         e.preventDefault() // Prevent page scroll
         e.stopPropagation() // Stop event bubbling
+        setIsDismissed(false)
         setIsVisible(true)
         setOpen(true)
       }
@@ -79,10 +71,10 @@ export default function ContactFooter() {
 
   // Update visibility based on conditions
   useEffect(() => {
-    setIsVisible(isHovered || isAtPageEnd || open)
-    // Show preview when hovering near bottom even if not fully visible
-    setShowPreview(isHovered || isAtPageEnd)
-  }, [isHovered, isAtPageEnd, open])
+    const shouldShowFooter = open || (isAtPageEnd && !isDismissed)
+    setIsVisible(shouldShowFooter)
+    setShowPreview(isHovered || (isAtPageEnd && !isDismissed))
+  }, [isHovered, isAtPageEnd, isDismissed, open])
 
   // Enhanced hover detection for footer area
   useEffect(() => {
@@ -170,6 +162,7 @@ export default function ContactFooter() {
         <div className="mx-auto mb-2 w-fit">
           <button
             onClick={() => {
+              setIsDismissed(false)
               setIsVisible(true)
               setOpen(true)
             }}
@@ -206,22 +199,23 @@ export default function ContactFooter() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-      {/* Collapsed bar */}
-      <button
-        aria-expanded={open}
-        aria-controls="contact-panel"
-        onClick={(e) => {
-          e.stopPropagation()
-          open ? handleClose() : setOpen(true)
-        }}
-        className="mx-auto mb-3 block rounded-full px-5 py-2 text-sm backdrop-blur-md
-          bg-white/70 dark:bg-neutral-900/70 border border-neutral-200/60 dark:border-neutral-800/60
-          shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-          hover:shadow-[0_8px_30px_rgba(57,255,20,0.25)] hover:border-green-400/40 hover:scale-105
-          hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
-      >
-        {open ? "Close" : "Contact Me"}
-      </button>
+      {!open && (
+        <button
+          aria-controls="contact-panel"
+          onClick={(e) => {
+            e.stopPropagation()
+            setIsDismissed(false)
+            setOpen(true)
+          }}
+          className="mx-auto mb-3 block rounded-full px-5 py-2 text-sm backdrop-blur-md
+            bg-white/70 dark:bg-neutral-900/70 border border-neutral-200/60 dark:border-neutral-800/60
+            shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
+            hover:shadow-[0_8px_30px_rgba(57,255,20,0.25)] hover:border-green-400/40 hover:scale-105
+            hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]"
+        >
+          Contact Me
+        </button>
+      )}
 
       {/* Panel */}
       <div

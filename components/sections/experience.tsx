@@ -60,6 +60,11 @@ export default function Experience() {
                 <div className="text-xs text-neutral-500 mb-2 group-hover:text-green-400 transition-colors duration-300">
                   {exp.location}
                 </div>
+                {exp.salary && (
+                  <div className="text-sm font-medium text-green-600 dark:text-green-400 mb-2">
+                    Salary: {exp.salary}
+                  </div>
+                )}
                 <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300 space-y-1">
                   {exp.highlights.map((h, i) => (
                     <li key={i} className="group-hover:text-neutral-600 dark:group-hover:text-neutral-200 transition-colors duration-300">
